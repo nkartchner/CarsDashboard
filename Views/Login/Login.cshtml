@@ -1,0 +1,60 @@
+@model LoginViewModel
+<div class="row">
+	<form method="POST" class="col mr-3">
+		<div class="row mb-3">
+			<h2>Register</h2>
+		</div>
+		<div class="row">
+			<label asp-for="User.FirstName"></label>
+			<input class="form-control" asp-for="User.FirstName" />
+			<span asp-validation-for="User.FirstName" class="text-danger"></span>
+		</div>
+		<div class="row">
+			<label asp-for="User.LastName"></label>
+			<input class="form-control" asp-for="User.LastName" />
+			<span asp-validation-for="User.LastName" class="text-danger"></span>
+		</div>
+		<div class="row">
+			<label asp-for="User.Email"></label>
+			<input class="form-control" asp-for="User.Email" />
+			<span asp-validation-for="User.Email" class="text-danger"></span>
+		</div>
+		<div class="row">
+			<label asp-for="User.Password"></label>
+			<input class="form-control" asp-for="User.Password" />
+			<span asp-validation-for="User.Password" class="text-danger"></span>
+		</div>
+		<div class="row">
+			<label asp-for="User.ConfirmPassword"></label>
+			<input class="form-control" asp-for="User.ConfirmPassword" />
+			<span
+				asp-validation-for="User.ConfirmPassword"
+				class="text-danger"
+			></span>
+		</div>
+		<div class="row">
+			<button class="btn btn-success mt-2 ml-2">Submit</button>
+		</div>
+	</form>
+	<form asp-action="Login" asp-controller="Login" class="col">
+		<div class="row mb-3">
+			<h2>Login</h2>
+		</div>
+		<div class="row">
+			<label asp-for="Credentials.Email"></label>
+			<input class="form-control" asp-for="Credentials.Email" />
+			<span asp-validation-for="Credentials.Email" class="text-danger"></span>
+		</div>
+		<div class="row">
+			<label asp-for="Credentials.Password"></label>
+			<input class="form-control" asp-for="Credentials.Password" />
+			<span
+				asp-validation-for="Credentials.Password"
+				class="text-danger"
+			></span>
+		</div>
+		<div class="row">
+			<button class="btn btn-success mt-2 ml-2">Submit</button>
+		</div>
+	</form>
+</div>

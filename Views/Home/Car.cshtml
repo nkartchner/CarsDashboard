@@ -1,0 +1,21 @@
+@model CarViewModel
+<div class="row">
+	<div class="col">
+		<h6>Year @Model.Car.Year</h6>
+		<h6>Make @Model.Car.Make</h6>
+		<h6>Model @Model.Car.Model</h6>
+		<h6>Color @Model.Car.Color</h6>
+		<ul>
+			@foreach(Like like in Model.Car.Likes) {
+			<li>@like.User.FirstName</li>
+			}
+		</ul>
+	</div>
+	<div class="col">
+		<form asp-action="AddLike" asp-controller="Home" method="post">
+			<input type="hidden" asp-for="Like.CarId" />
+			<input type="hidden" asp-for="Like.UserId" />
+			<button class="btn btn-info">Like</button>
+		</form>
+	</div>
+</div>
