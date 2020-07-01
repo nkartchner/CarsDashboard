@@ -25,7 +25,6 @@ _UpgradeReport_Files/
 bin/
 obj/
 .vscode/
-wwwroot/lib/
 TestResults/
 ###################
 # Web publish log #
@@ -75,3 +74,4 @@ _[Ss]cripts
 *.nupkg
 *.ncrunchsolution
 *.dot[Cc]over
+/Migrations
